@@ -1,7 +1,4 @@
 class Nelilaskin:
-    def __init__(self):
-        pass
-    
     def Plussaa(self):
         print("Yhteenlasku (+)")
         luku1 = float(input("Anna 1. luku: "))
@@ -51,8 +48,8 @@ class Nelilaskin:
             with open("historia.txt", "r") as tiedosto:
                 for rivi in tiedosto:
                     osat = rivi.split(";")
-                    print(f"{osat[0]} {osat[1]} {osat[2]} = {osat[3]}", end="") #itselläni tulostus näyttää oikealta tämän end="" kanssa, eli jokainen rivi omalla rivillään, 
-                tiedosto.close()                                                #mutta ilman sitä tulee jostain syystä ylimääräisiä rivinvaihtoja
+                    print(f"{osat[0]} {osat[1]} {osat[2]} = {osat[3]}", end="") 
+                tiedosto.close()                                                
     
     def TyhjennaHistoria(self):
         with open("historia.txt", "w") as tiedosto:
@@ -95,7 +92,6 @@ class Nelilaskin:
                 self.TyhjennaHistoria(self)
             elif luku == 7:
                 self.Tiedot(self)
-
-#Testausta varten, jostain syystä itsellä piti laittaa Suorita() sisälle parametriksi laskin, ennen ei ole tarvinnut tunkea sitä noin paljon kaikkialle:    
-#laskin = Nelilaskin
-#laskin.Suorita(laskin)
+  
+laskin = Nelilaskin
+laskin.Suorita(laskin)
